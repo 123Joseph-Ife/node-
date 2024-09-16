@@ -4,7 +4,18 @@
     <body>
         <%- include("../partials/nav.ejs") %>
         <div class="blogs coontent">
+            <% if(blogs.length > 0) { %> 
             
+                <% blogs.forEach(blog => { %>
+                  <a class="single" href="/blogs/<%= blog._id %>">
+                      <h3><%= blog.title %></h3>
+                      <p><%= blog.snippet %></p>
+                  </a>
+                <% }) %> 
+                
+                <% } else { %>
+                  <p>Not Blogs To Display</p>
+                <% } %>
         </div>
         <%- include("../partials/footer.ejs") %>
     </body>

@@ -5,7 +5,7 @@
         <%- include("../partials/nav.ejs") %>
 
         <div class="create-blog content">
-            <form>
+            <form method="post" action="/blogs">
                 <!-- Title -->
                 <label for="title" aria-labelledby="title">Blog title:</label>
                 <input
@@ -34,7 +34,7 @@
                 <!-- Body -->
                 <label for="body" aria-labelledby="body">Blog title</label>
                 <textarea
-                    name="body"
+                    name="description"
                     id="body"
                     title="title"
                     aria-label="title"
